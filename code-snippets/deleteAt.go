@@ -1,8 +1,3 @@
-import (
-	"errors"
-	"fmt"
-)
-
 // DeleteAt deletes node at given position from linked list
 func (l *LinkedList) DeleteAt(pos int) error {
 	// validate the position
