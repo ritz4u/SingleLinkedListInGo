@@ -1,7 +1,7 @@
 package main
 
 import (
-	linkedList "Go_Practice/linked_list/src"
+	linkedList "SingleLinkedListInGo/src"
 	"fmt"
 )
 
