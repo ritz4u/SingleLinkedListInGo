@@ -83,17 +83,18 @@ func (l *LinkedList) InsertAt(pos int, value int) {
 	newNode := Node{}
 	newNode.value = value
 	// validate the position
-	if pos < 0 {
+  	// third case: the list is empty  
+	if pos < 0 || pos > l.len || l.len == 0 {
 		return
 	}
-	if pos == 0 {
+
+	if pos == 0 && l.len != 0 {
+		newNode.next = l.head
 		l.head = &newNode
 		l.len++
 		return
 	}
-	if pos > l.len {
-		return
-	}
+
 	n := l.GetAt(pos)
 	newNode.next = n
 	prevNode := l.GetAt(pos - 1)
